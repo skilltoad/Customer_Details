@@ -1,31 +1,65 @@
-.App {
+/* App.css */
+body {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 6px 0;
+}
+.heading {
+  border-bottom: 1px solid #d7e5e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+}
+.customer-list {
+  flex: 1;
+  text-align: left;
+}
+.details {
+  flex: 3;
+  background-color: #f8f9ff;
+  padding: 0 80px;
+}
+.card {
+  padding: 16px 20px;
+  border-bottom: 1px solid #d7e5e4;
+  border-right: 1px solid #d7e5e4;
+  cursor: pointer;
+}
+.card:hover,
+.list .item:hover {
+  background-color: #f8f9ff;
+}
+.display-photo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.display-photo img{
+  border-radius: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +69,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination-controls button {
+  padding: 10px 20px;
+  border: 1px solid #d7e5e4;
+  background-color: #f8f9ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination-controls button:hover {
+  background-color: #c0c1c6;
+  background-color: #000000;
+  color: #ffffff;
+}
+.pagination-controls button:disabled {
+  background-color: #f8f9ff;
+  color: rgba(16, 16, 16, 0.3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.customer-list::-webkit-scrollbar,
+.details::-webkit-scrollbar {
+  width: 5px;
+}
+.customer-list::-webkit-scrollbar {
+  display: none;
+}
+.customer-list::-webkit-scrollbar-thumb,
+.details::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.customer-list::-webkit-scrollbar-track,
+.details::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.customer-list::-webkit-scrollbar-button,
+.details::-webkit-scrollbar-button {
+  display: none;
 }
